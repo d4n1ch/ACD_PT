@@ -89,16 +89,16 @@ if(_Food)then{
 	_Food_cashDesk setDir 180;
 	_Food_microwave = "Land_Microwave_01_F" createVehicleLocal [0,0,0];
 	_cashDesk disableCollisionWith _Food_microwave;         
-	_Food_microwave disableCollisionWith test9_cashDesk; 
-	_Food_microwave attachTo [test9_cashDesk, [-0.6, 0.2, 1.1]];
+	_Food_microwave disableCollisionWith _Food_cashDesk; 
+	_Food_microwave attachTo [_Food_cashDesk, [-0.6, 0.2, 1.1]];
 	_ketchup = "Land_Ketchup_01_F" createVehicleLocal [0,0,0];
 	_cashDesk disableCollisionWith _ketchup;         
-	_ketchup disableCollisionWith test9_cashDesk; 
-	_ketchup attachTo [test9_cashDesk, [-0.6, 0, 1.1]];
+	_ketchup disableCollisionWith _Food_cashDesk; 
+	_ketchup attachTo [_Food_cashDesk, [-0.6, 0, 1.1]];
 	_mustard = "Land_Mustard_01_F" createVehicleLocal [0,0,0];
 	_cashDesk disableCollisionWith _mustard;         
-	_mustard disableCollisionWith test9_cashDesk; 
-	_mustard attachTo [test9_cashDesk, [-0.5, -0.05, 1.1]];
+	_mustard disableCollisionWith _Food_cashDesk; 
+	_mustard attachTo [_Food_cashDesk, [-0.5, -0.05, 1.1]];
 	[
 			"Exile_Trader_Food",
 			"GreekHead_A3_01",
