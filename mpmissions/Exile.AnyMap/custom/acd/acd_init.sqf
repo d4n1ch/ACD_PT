@@ -22,4 +22,5 @@
 */
 
 //This will build you a trading post at Altis Terminal
+diag_log format ["### ACD: acd_init.sqf: INIT ###"];
 [true,[15137.3,16695.4,0.00143814],300,true,true,true,true,true,true,true,true] call acd_fnc_createTradingOffice;
