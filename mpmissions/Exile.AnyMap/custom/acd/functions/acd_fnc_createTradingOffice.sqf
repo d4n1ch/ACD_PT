@@ -27,7 +27,7 @@
 
 */
 /*#######################################################################################*/
-private["_pos"];
+private["_pos","_ID"];
 _isSafe = _this select 0;
 _pos = _this select 1;
 _general_direction = _this select 2;
