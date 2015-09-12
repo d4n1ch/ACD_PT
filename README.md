@@ -7,7 +7,7 @@ for Arma 3 @Exile mod
 
 ACD_PT Version
 --------------
-* 0.1
+* 0.2
 
 @Exile Version
 ---------------
@@ -17,6 +17,12 @@ TODO:
 -----
   - Place more props
 
+Changelog:
+----------
+
+#### 0.2
+* Added `_ID` to assign unique number of sz
+  
 Tech
 ----
 
@@ -47,12 +53,13 @@ INSTALLATION:
 		_Office, 			// [boolean: true/false] - Turn ON/OFF Office trader and props
 		_SpecialOperations, // [boolean: true/false] - Turn ON/OFF Special Operations trader and props
 		_Vehicle, 			// [boolean: true/false] - Turn ON/OFF Vehicle trader and props
-		_WasteDump 			// [boolean: true/false] - Turn ON/OFF Waste Dump trader and props
+		_WasteDump,			// [boolean: true/false] - Turn ON/OFF Waste Dump trader and props
+		_ID,				// [number: unique] - Designated number of safe zone
 	] call acd_fnc_createTradingOffice;
 ```
 
 #### Example:
 
 ```java
-[true,[15137.3,16695.4,0.00143814],300,true,true,true,true,true,true,true,true] call acd_fnc_createTradingOffice;
+[true,[15137.3,16695.4,0.00143814],300,true,true,true,true,true,true,true,true,347] call acd_fnc_createTradingOffice;
 ```
