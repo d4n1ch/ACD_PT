@@ -17,12 +17,13 @@
 		_Office, 				// [boolean: true/false] - Turn ON/OFF Office trader and props
 		_SpecialOperations, 	// [boolean: true/false] - Turn ON/OFF Special Operations trader and props
 		_Vehicle, 				// [boolean: true/false] - Turn ON/OFF Vehicle trader and props
-		_WasteDump 				// [boolean: true/false] - Turn ON/OFF Waste Dump trader and props
+		_WasteDump, 				// [boolean: true/false] - Turn ON/OFF Waste Dump trader and props
+		_ID
 	] call acd_fnc_createTradingOffice;
 	
 	Example:
 	
-	[true,[15137.3,16695.4,0.00143814],300,true,true,true,true,true,true,true,true] call acd_fnc_createTradingOffice;
+	[true,[15137.3,16695.4,0.00143814],300,true,true,true,true,true,true,true,true,347] call acd_fnc_createTradingOffice;
 
 */
 /*#######################################################################################*/
@@ -38,6 +39,7 @@ _Office = _this select 7;
 _SpecialOperations = _this select 8;
 _Vehicle = _this select 9;
 _WasteDump = _this select 10;
+_ID = _this select 11;
 /*#######################################################################################*/
 _main_building_class = "Land_milOffices_V1_f";       
 _main_building = _main_building_class createVehicleLocal [0,0,0];      
@@ -230,7 +232,7 @@ if (isServer)then{
 		/*
 			SZ Marker
 		*/
-		_sz_marker_name = "Trader_City_Marker";
+		_sz_marker_name = format["Trader_City_Marker_%1",_ID];
 		_sz_marker = createMarker [_sz_marker_name,_pos];
 		_sz_marker_name setMarkerShape "ELLIPSE";
 		_sz_marker_name setMarkerSize [175,175];
@@ -243,7 +245,7 @@ if (isServer)then{
 		/*
 			Trading Outpost Marker
 		*/
-		_sz_marker_name = format["Black_Market_%1_Marker",_sz_name];
+		_sz_marker_name = format["Black_Market_Marker_%1",_ID];
 		_sz_marker = createMarker [_sz_marker_name,_pos];
 		_sz_marker_name setMarkerShape "ICON";
 		_sz_marker_name setMarkerType "MinefieldAP";
